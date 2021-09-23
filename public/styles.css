@@ -1,0 +1,20 @@
+body{
+    padding: 5rem;
+}
+
+.defaultLink, .enterUsername{
+    display: inline-block;
+    margin: 0 1rem 0 0;
+}
+
+.enterUsername{
+    border-radius: 5px;
+    height: 2rem;
+    border-style: solid;
+    border-width: 1px;
+    outline: none;
+}
+
+.enterUsername:focus{
+    border-color: #bf00ff;
+}

@@ -1,13 +1,12 @@
+import React from 'react';
+import InputUsername from './InputUsername.jsx';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <p className = "defaultLink">kardi.com/</p>
-      <input className = "enterUsername" type = "text" placeholder = "your username"/>
-      <button className = "createLink">Create Link</button>
-    </div>
-  );
+  <div>
+    <InputUsername />
+  </div>);
 }
 
 export default App;

@@ -75,3 +75,10 @@ body{
     padding: 0 0.2rem 0 0.2rem;
 }
 
+.introContainer{
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    top: 40rem;
+}
+

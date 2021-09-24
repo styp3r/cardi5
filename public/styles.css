@@ -1,5 +1,5 @@
 body{
-    padding: 2rem;
+    text-align: center;
 }
 
 .defaultLink, .enterUsername{
@@ -17,6 +17,10 @@ body{
 
 .enterUsername:focus{
     border-color: #bf00ff;
+}
+
+.navbar{
+    margin-top: 2rem;
 }
 
 .leftSection{
@@ -38,8 +42,36 @@ body{
 .signup{
     background-color: #bf00ff;
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     padding: 0.5rem;
     border-radius: 0.7rem;
+}
+
+.heroContainer{
+    position: absolute;
+    top: 10rem;
+    width: 100%;
+    height: 20rem;
+}
+
+.createMode{
+    margin-top: 2rem;
+    outline: none;
+    border-style: solid;
+    border-radius: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 1rem;
+    border-color: #000000;
+    cursor: pointer;
+}
+
+.createMode:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.fa-chevron-right{
+    padding: 0 0.2rem 0 0.2rem;
 }
 

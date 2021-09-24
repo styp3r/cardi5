@@ -3,6 +3,8 @@ import Navbar from './Navbar.jsx';
 import './App.css';
 import { Switch , Route} from 'react-router-dom';
 import LogIn from './LogIn.jsx';
+import SignUp from './SignUp.jsx';
+import Home from './Home.jsx';
 
 function App() {
 
@@ -10,9 +12,9 @@ function App() {
   <div>
     <Navbar />
       <Switch>
-        <Route path="/login">
-          <LogIn />
-        </Route>
+        <Route path="/" component = {Home}/>
+        <Route path="/login" component = {LogIn}/>
+        <Route path="/signup" component = {SignUp}/>
       </Switch>
   </div>);
 }

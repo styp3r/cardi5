@@ -1,11 +1,19 @@
 import React from 'react';
-import InputUsername from './InputUsername.jsx';
+import Navbar from './Navbar.jsx';
 import './App.css';
+import { Switch , Route} from 'react-router-dom';
+import LogIn from './LogIn.jsx';
 
 function App() {
+
   return (
   <div>
-    <InputUsername />
+    <Navbar />
+      <Switch>
+        <Route path="/login">
+          <LogIn />
+        </Route>
+      </Switch>
   </div>);
 }
 

@@ -1,5 +1,5 @@
 body{
-    padding: 5rem;
+    padding: 2rem;
 }
 
 .defaultLink, .enterUsername{
@@ -18,3 +18,28 @@ body{
 .enterUsername:focus{
     border-color: #bf00ff;
 }
+
+.leftSection{
+    position: absolute;
+    left: 5rem;
+}
+
+.rightSection{
+    position: absolute;
+    right: 5rem;
+}
+
+.createlink, .pricing, .login{
+    padding: 0 2rem 0 0;
+    text-decoration: none;
+    color: #000000;
+}
+
+.signup{
+    background-color: #bf00ff;
+    text-decoration: none;
+    color: #000000;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+}
+

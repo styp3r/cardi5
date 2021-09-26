@@ -54,9 +54,31 @@
 
 .createLinkBtn{
   margin: 0 0 0 2vmin;
-  background-color: #ff6666;
+  background-color: #b366ff;
   color: #ffffff;
   border-style: none;
   padding: 2vmin;
   border-radius: 4vmin;
+}
+
+.processContainer{
+  margin: 15vmax 0 0 0;
+  font-size: 3vmin;
+  font-weight: 100;
+  line-height: 3vmax;
+}
+
+li{
+  list-style: circle;
+}
+
+.process{
+  position: absolute;
+  left: 15vmin;
+}
+
+.processText{
+  position: absolute;
+  right: 15vmax;
+  text-align: left;
 }

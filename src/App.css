@@ -3,82 +3,25 @@
 }
 
 .navbarContainer{
-  width: 100%;
-  height: 15vmin;
-}
-
-.heroContainer{
-  width: 100%;
-  height: 35vmax;
-  text-align: left;
-}
-
-.heroPrimary{
-  font-size: 5vmin;
-  font-weight: 100;
-}
-
-.heroSecondary{
-  font-size: 3vmin;
-  font-weight: 100;
-}
-
-.heroImage{
-  position: absolute;
-  right: 10vmax;
-  top: 12vmax; 
-}
-
-.heroText{
-  position: absolute;
-  left: 15vmax;
-  top: 13vmax;
-}
-
-.heroInput{
-  margin: 10vmin 0 0 0;
-}
-
-.linkPrefix{
-  display: inline-block;
-  padding: 0 1vmin 0 0;
-}
-
-.createLinkInput{
-  width: 35vmin;
-  height: 3vmin;
+  width: 20vmax;
+  height: 7vmin;
+  margin: auto;
+  background-color: #ffffff;
   border-radius: 5vmin;
-  border-style: solid;
-  padding: 1.5vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 2vmin 0 #e6e6e6;
 }
 
-.createLinkBtn{
-  margin: 0 0 0 2vmin;
-  background-color: #b366ff;
-  color: #ffffff;
-  border-style: none;
-  padding: 2vmin;
-  border-radius: 4vmin;
-}
-
-.processContainer{
-  margin: 15vmax 0 0 0;
+.navItem{
+  text-decoration: none;
+  padding: 2.5vmin;
   font-size: 3vmin;
-  font-weight: 100;
-  line-height: 3vmax;
+  color: #bfbfbf;
+  
 }
 
-li{
-  list-style: circle;
-}
-
-.process{
-  position: absolute;
-  left: 15vmin;
-}
-
-.processText{
-  position: absolute;
-  right: 15vmax;
-  text-align: left;
+.navItem:hover{
+  color: #4db8ff;
 }

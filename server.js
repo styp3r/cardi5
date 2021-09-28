@@ -5,10 +5,6 @@ import { ref, onValue } from "firebase/database";
 
 const app = express();
 
-app.get("/", (req, res)=>{
-    res.send("hello from the server!");
-});
-
 app.get("/:id", (req, res)=>{
     const db = database;
     const starCountRef = ref(db, 'users/'+req.params.id);

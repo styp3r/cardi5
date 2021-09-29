@@ -1,13 +1,13 @@
 import React from 'react';
 
-import HeroVideo from '../images/heroVideo.mp4';
+//import HeroVideo from '../images/heroVideo.mp4';
 import { Link } from 'react-router-dom';
 
 function Hero(){
     return(
         <div className = "heroContainer">
         <div className = "heroVideoContainer">
-            <video className = "heroVideo" src = {HeroVideo} width = "400" height = "400" autoplay = "true" loop = "true"/>
+            <video className = "heroVideo" src = "" width = "400" height = "400" autoplay = "true" loop = "true"/>
         </div>
         <div className = "heroTextContainer">
             <h1 className = "heroHeader">Social media is fun,</h1>

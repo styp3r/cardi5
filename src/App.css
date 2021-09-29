@@ -5,7 +5,7 @@
 .navbarContainer{
   width: 20vmax;
   height: 7vmin;
-  margin: auto;
+  margin: 5vmin auto 5vmin auto;
   background-color: #ffffff;
   border-radius: 5vmin;
   display: flex;
@@ -23,5 +23,71 @@
 }
 
 .navItem:hover{
-  color: #4db8ff;
+  color: #0099ff;
+}
+
+.heroContainer{
+  width: 100%;
+  height: 40vmax;
+}
+
+.heroVideoContainer{
+  position: absolute;
+  right: 15vmax;
+  margin: 10vmin 0 0 0;
+  width: 21vmax;
+  height: 21vmax;
+  border-radius: 2vmin;
+  overflow: hidden;
+  display: flex;
+  justify-content: right;
+  align-content: right;
+}
+
+.heroVideo{
+  object-fit: cover;
+}
+
+.heroTextContainer{
+  height: 20vmax;
+  position: absolute;
+  left: 15vmax;
+  margin: 10vmin 0 0 0;
+}
+
+
+.heroHeader{
+  font-size: 7vmin;
+  margin: 0;
+}
+
+.heroIntro{
+  width: 35vmax;
+  margin-bottom: 5vmin;
+}
+
+
+.heroButton{
+  background-color: #0099ff;
+  color: #ffffff;
+  padding: 2vmin 6vmin 2vmin 6vmin;
+  border-radius: 2vmin;
+  border-width: 0;
+  font-size: 2.5vmin;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.blue{
+  color: #0099ff;
+}
+
+.heroButton:hover{
+  cursor: pointer;
+  background-color: #008ae6;
+}
+
+.heroIntro{
+  font-size: 2.5vmin;
+  color: #666666;
 }

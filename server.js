@@ -12,7 +12,11 @@ app.get("/:id", (req, res)=>{
         if(snapshot.exists()){
             const data = snapshot.val();
             const entries = Object.entries(data);
-            res.send("<h1>"+entries+"</h1>");
+            console.log(data.username);
+            for(let i = 0; i < (entries.length-1); i++){
+                res.write("<h4 style = 'width: 30vmin; border-radius: 2vmin ; background-color: #4d94ff; padding: 2vmin;'><a style = 'text-decoration: none; color: #ffffff;' href = "+entries[i][1]+">Facebook</a></h4>");
+            }
+            res.send();
         }else{
             res.send("ERROR 404");
         }

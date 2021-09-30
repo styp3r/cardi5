@@ -17,20 +17,80 @@ function GenerateLinks(props){
 
 
    // Push Function
-   function writeUserData() {
+   function writeUserData1() {
     const db = database;
     var uniqueId = Math.floor(Math.random()*100000);
     setUrl("http://localhost:4000/" + name+ uniqueId);
             set(ref(db, 'users/'+name + uniqueId), {
               username: name,
-              link1: link1,
-              link2: link2,
-              link3: link3,
-              link4: link4,
-              link5: link5,
-              link6: link6 
+              link1: link1
             }); 
       }
+
+      function writeUserData2() {
+        const db = database;
+        var uniqueId = Math.floor(Math.random()*100000);
+        setUrl("http://localhost:4000/" + name+ uniqueId);
+                set(ref(db, 'users/'+name + uniqueId), {
+                  username: name,
+                  link1: link1,
+                  link2: link2
+                }); 
+          }
+
+          function writeUserData3() {
+            const db = database;
+            var uniqueId = Math.floor(Math.random()*100000);
+            setUrl("http://localhost:4000/" + name+ uniqueId);
+                    set(ref(db, 'users/'+name + uniqueId), {
+                      username: name,
+                      link1: link1,
+                      link2: link2,
+                      link3: link3 
+                    }); 
+              }
+
+              function writeUserData4() {
+                const db = database;
+                var uniqueId = Math.floor(Math.random()*100000);
+                setUrl("http://localhost:4000/" + name+ uniqueId);
+                        set(ref(db, 'users/'+name + uniqueId), {
+                          username: name,
+                          link1: link1,
+                          link2: link2,
+                          link3: link3,
+                          link4: link4
+                        }); 
+                  }
+
+                  function writeUserData5() {
+                    const db = database;
+                    var uniqueId = Math.floor(Math.random()*100000);
+                    setUrl("http://localhost:4000/" + name+ uniqueId);
+                            set(ref(db, 'users/'+name + uniqueId), {
+                              username: name,
+                              link1: link1,
+                              link2: link2,
+                              link3: link3,
+                              link4: link4,
+                              link5: link5 
+                            }); 
+                      }
+
+                      function writeUserData6() {
+                        const db = database;
+                        var uniqueId = Math.floor(Math.random()*100000);
+                        setUrl("http://localhost:4000/" + name+ uniqueId);
+                                set(ref(db, 'users/'+name + uniqueId), {
+                                  username: name,
+                                  link1: link1,
+                                  link2: link2,
+                                  link3: link3,
+                                  link4: link4,
+                                  link5: link5,
+                                  link6: link6 
+                                }); 
+                          }
 
       if(props.count > 5){
         document.getElementById("addNewLink").disabled = true;
@@ -45,7 +105,7 @@ function GenerateLinks(props){
                 <div>
                     <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
                     <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
-                    <button id = "pushBtn" onClick={writeUserData}>PUSH</button>
+                    <button id = "pushBtn" onClick={writeUserData1}>PUSH</button>
                     <p>{url}</p>
                 </div>
             );
@@ -55,7 +115,7 @@ function GenerateLinks(props){
                     <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
             <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
-            <button id = "pushBtn" onClick={writeUserData}>PUSH</button>
+            <button id = "pushBtn" onClick={writeUserData2}>PUSH</button>
             <p>{url}</p>
                 </div>
             );
@@ -66,7 +126,7 @@ function GenerateLinks(props){
             <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
             <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link3" value={link3} onChange={(e) => setLink3(e.target.value)}/>
-            <button id = "pushBtn" onClick={writeUserData}>PUSH</button>
+            <button id = "pushBtn" onClick={writeUserData3}>PUSH</button>
             <p>{url}</p>
                 </div>
             );
@@ -78,7 +138,7 @@ function GenerateLinks(props){
             <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link3" value={link3} onChange={(e) => setLink3(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link4" value={link4} onChange={(e) => setLink4(e.target.value)}/>
-            <button id = "pushBtn" onClick={writeUserData}>PUSH</button>
+            <button id = "pushBtn" onClick={writeUserData4}>PUSH</button>
             <p>{url}</p>
                 </div>
             );
@@ -91,7 +151,7 @@ function GenerateLinks(props){
             <input className = "spacing" type = "url" placeholder="Enter link3" value={link3} onChange={(e) => setLink3(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link4" value={link4} onChange={(e) => setLink4(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link5" value={link5} onChange={(e) => setLink5(e.target.value)}/>
-            <button id = "pushBtn" onClick={writeUserData}>PUSH</button>
+            <button id = "pushBtn" onClick={writeUserData5}>PUSH</button>
             <p>{url}</p>
                 </div>
             );
@@ -105,7 +165,7 @@ function GenerateLinks(props){
             <input className = "spacing" type = "url" placeholder="Enter link4" value={link4} onChange={(e) => setLink4(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link5" value={link5} onChange={(e) => setLink5(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link6" value={link6} onChange={(e) => setLink6(e.target.value)}/>
-            <button id = "pushBtn" onClick={writeUserData}>PUSH</button>
+            <button id = "pushBtn" onClick={writeUserData6}>PUSH</button>
             <p>{url}</p>
                 </div>
             ); 

@@ -11,6 +11,7 @@ function GenerateLinks(props){
   const [link4 , setLink4] = useState("");
   const [link5 , setLink5] = useState("");
   const [link6 , setLink6] = useState(""); 
+  const [color, setColor] = useState();
   const [name , setName] = useState("");
   
   const [url, setUrl] = useState();
@@ -23,6 +24,7 @@ function GenerateLinks(props){
     setUrl("http://localhost:4000/" + name+ uniqueId);
             set(ref(db, 'users/'+name + uniqueId), {
               username: name,
+              zcolor: color,
               link1: link1
             }); 
       }
@@ -33,6 +35,7 @@ function GenerateLinks(props){
         setUrl("http://localhost:4000/" + name+ uniqueId);
                 set(ref(db, 'users/'+name + uniqueId), {
                   username: name,
+                  zcolor: color,
                   link1: link1,
                   link2: link2
                 }); 
@@ -44,6 +47,7 @@ function GenerateLinks(props){
             setUrl("http://localhost:4000/" + name+ uniqueId);
                     set(ref(db, 'users/'+name + uniqueId), {
                       username: name,
+                      zcolor: color,
                       link1: link1,
                       link2: link2,
                       link3: link3 
@@ -56,6 +60,7 @@ function GenerateLinks(props){
                 setUrl("http://localhost:4000/" + name+ uniqueId);
                         set(ref(db, 'users/'+name + uniqueId), {
                           username: name,
+                          zcolor: color,
                           link1: link1,
                           link2: link2,
                           link3: link3,
@@ -69,6 +74,7 @@ function GenerateLinks(props){
                     setUrl("http://localhost:4000/" + name+ uniqueId);
                             set(ref(db, 'users/'+name + uniqueId), {
                               username: name,
+                              zcolor: color,
                               link1: link1,
                               link2: link2,
                               link3: link3,
@@ -83,6 +89,7 @@ function GenerateLinks(props){
                         setUrl("http://localhost:4000/" + name+ uniqueId);
                                 set(ref(db, 'users/'+name + uniqueId), {
                                   username: name,
+                                  zcolor: color,
                                   link1: link1,
                                   link2: link2,
                                   link3: link3,
@@ -103,6 +110,7 @@ function GenerateLinks(props){
         case 1:
             return (
                 <div>
+                    <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
                     <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
                     <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
                     <button id = "pushBtn" onClick={writeUserData1}>PUSH</button>
@@ -112,6 +120,7 @@ function GenerateLinks(props){
         case 2:
             return(
                 <div>
+                <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
                     <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
             <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
@@ -122,6 +131,7 @@ function GenerateLinks(props){
         case 3:
             return(
                 <div>
+                <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
                     <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
             <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
@@ -133,6 +143,7 @@ function GenerateLinks(props){
         case 4:
             return(
                 <div>
+                <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
                     <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
             <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
@@ -145,6 +156,7 @@ function GenerateLinks(props){
         case 5:
             return(
                 <div>
+                <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
                     <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
             <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
@@ -158,6 +170,7 @@ function GenerateLinks(props){
         case 6:
             return(
                 <div>
+                <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
                     <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
             <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
             <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>

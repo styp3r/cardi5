@@ -11,7 +11,7 @@ function GenerateLinks(props){
   const [link4 , setLink4] = useState("");
   const [link5 , setLink5] = useState("");
   const [link6 , setLink6] = useState(""); 
-  const [color, setColor] = useState();
+  const [color, setColor] = useState("#000000");
   const [name , setName] = useState("");
   
   const [url, setUrl] = useState();

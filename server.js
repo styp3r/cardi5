@@ -3,7 +3,7 @@ import database from './src/firebase.js';
 import { ref, onValue } from "firebase/database";
 
 const app = express();
-const social = ["facebook", "#3b5998", "instagram", "#55acee", "behance", "#1769ff" ,"snapchat", "#fffc00","twitter", "#55acee", "linkedin", "#007bb5" ,"youtube", "#ff0000", "tiktok", "#333333", "reddit", "#ff4500", "tumblr", "#32506d", "apple", "#f2f2f2", "spotify", "#00e461"];
+const social = ["facebook", "#3b5998", "instagram", "#55acee", "behance", "#1769ff" ,"snapchat", "#fffc00","twitter", "#55acee", "linkedin", "#007bb5" ,"youtube", "#ff0000", "tiktok", "#333333", "reddit", "#ff4500", "tumblr", "#32506d", "apple", "#b3b3b3", "spotify", "#00e461"];
 
 app.get("/:id", (req, res)=>{
     const db = database;
@@ -12,12 +12,13 @@ app.get("/:id", (req, res)=>{
         if(snapshot.exists()){
             const data = snapshot.val();
             const entries = Object.entries(data);
-            res.write("<body style = 'width: 100%; height: 100%; overflow: hidden; background-image: linear-gradient("+data.zcolor+", #ffffff);'></body>");
+            res.write("<body style = 'width: 100%; height: 100%; overflow: hidden; background-image: linear-gradient("+data.zcolor+", #ffffff);'><head><title>My Page</title><link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.15.4/css/all.css' integrity='sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm' crossorigin='anonymous'></head></body>");
             res.write("<h3 style = 'display: inline-block; margin-left: 50%; transform: translateX(-50%); margin-top: 10vmax;'>"+data.username+"</h3>");
             for(let i = 0; i < (entries.length-2); i++){
 
                 var color = "#999999";
-                var socialName = "default";
+                var socialName = "link";
+                var type = "fas";
 
                 for(let j = 0; j< social.length; j++){
 
@@ -26,10 +27,11 @@ app.get("/:id", (req, res)=>{
                     if(isFound !== -1){
                         socialName = social[j];
                         color = social[j + 1];
+                        type = "fab";
                         break;
                     }
                 }
-                res.write("<h4 style = 'text-align: center; margin-left: 50%; transform: translateX(-50%); margin-top: 2vmax; width: 30vmin; border-radius: 2.5vmin ; background-color: "+color+"; padding: 2vmin;'><a style = 'display: block; text-decoration: none; color: "+color+";' href = "+entries[i][1]+"/>"+socialName+"</h4>");
+                res.write("<h4 style = 'text-align: center; margin-left: 50%; transform: translateX(-50%); margin-top: 2vmax; width: 30vmin; border-radius: 2.5vmin ; background-color: "+color+"; padding: 2vmin;'><i style = 'color: #ffffff; position: absolute; left: 2vmin;' class='"+type+" fa-"+socialName+"'></i><a style = 'display: block; text-decoration: none; color: "+color+";' href = "+entries[i][1]+" target='_blank'/>"+socialName+"</h4>");
             }
             res.send();
         }else{

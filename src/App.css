@@ -1,3 +1,17 @@
+#addNewLink, #removeLink{
+  padding: 2vmin;
+  background-color: #0099ff;
+  border: none;
+  color: #ffffff;
+  border-radius: 2vmin;
+  cursor: pointer;
+}
+
+#addNewLink{
+   width: 30vmax;
+   margin: 0 2vmin 0 0;
+}
+
 .App {
   text-align: center;
 }
@@ -92,6 +106,42 @@
   color: #666666;
 }
 
+.nameSpacing{
+  display: block;
+  padding: 1vmin;
+  margin: 1vmin 1vmin 5vmin 1vmin;
+  border: none;
+  border-radius: 1vmin;
+}
+
 .spacing{
   display: block;
+  padding: 1vmin;
+  margin: 1vmin;
+  width: 30vmin;
+  border: none;
+  border-radius: 1vmin;
+}
+
+.linkInputContainer{
+  padding: 3vmin;
+  width: 35vmin;
+  margin: 1vmin;
+  background-color: aqua;
+  border-radius: 1vmin;
+  background-color: #f2f2f2;
+}
+
+.dashboardHeader{
+  margin: 0 0 5vmin 17vmin;
+}
+
+.creatorDashboard{
+  position: absolute;
+  left: 15vmin;
+  display: inline-block;
+  width: 50vmax;
+  height: 55vmin;
+  border-radius: 2vmin;
+  padding: 5vmin;
 }

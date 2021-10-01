@@ -16,6 +16,15 @@ function GenerateLinks(props){
   
   const [url, setUrl] = useState();
 
+  const enterName = <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>;
+  const enterLink1 = <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/>;
+  const enterLink2 = <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>;
+  const enterLink3 = <input className = "spacing" type = "url" placeholder="Enter link3" value={link3} onChange={(e) => setLink3(e.target.value)}/>;
+  const enterLink4 = <input className = "spacing" type = "url" placeholder="Enter link4" value={link4} onChange={(e) => setLink4(e.target.value)}/>;
+  const enterLink5 = <input className = "spacing" type = "url" placeholder="Enter link5" value={link5} onChange={(e) => setLink5(e.target.value)}/>;
+  const enterLink6 = <input className = "spacing" type = "url" placeholder="Enter link6" value={link6} onChange={(e) => setLink6(e.target.value)}/>;
+
+
 
    // Push Function
    function writeUserData1() {
@@ -111,8 +120,8 @@ function GenerateLinks(props){
             return (
                 <div>
                     <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
-                    <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
-                    <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
+                    {enterName}
+                    {enterLink1} 
                     <button id = "pushBtn" onClick={writeUserData1}>PUSH</button>
                     <p>{url}</p>
                 </div>
@@ -121,9 +130,9 @@ function GenerateLinks(props){
             return(
                 <div>
                 <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
-                    <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
-            <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
+                    {enterName}
+                    {enterLink1}
+                    {enterLink2}
             <button id = "pushBtn" onClick={writeUserData2}>PUSH</button>
             <p>{url}</p>
                 </div>
@@ -132,10 +141,10 @@ function GenerateLinks(props){
             return(
                 <div>
                 <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
-                    <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
-            <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link3" value={link3} onChange={(e) => setLink3(e.target.value)}/>
+                    {enterName}
+                    {enterLink1}
+                    {enterLink2}
+                    {enterLink3}
             <button id = "pushBtn" onClick={writeUserData3}>PUSH</button>
             <p>{url}</p>
                 </div>
@@ -144,11 +153,11 @@ function GenerateLinks(props){
             return(
                 <div>
                 <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
-                    <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
-            <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link3" value={link3} onChange={(e) => setLink3(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link4" value={link4} onChange={(e) => setLink4(e.target.value)}/>
+                    {enterName}
+                    {enterLink1}
+                    {enterLink2}
+                    {enterLink3}
+                    {enterLink4}
             <button id = "pushBtn" onClick={writeUserData4}>PUSH</button>
             <p>{url}</p>
                 </div>
@@ -157,12 +166,12 @@ function GenerateLinks(props){
             return(
                 <div>
                 <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
-                    <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
-            <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link3" value={link3} onChange={(e) => setLink3(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link4" value={link4} onChange={(e) => setLink4(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link5" value={link5} onChange={(e) => setLink5(e.target.value)}/>
+                    {enterName}
+                    {enterLink1}
+                    {enterLink2}
+                    {enterLink3}
+                    {enterLink4}
+                    {enterLink5}
             <button id = "pushBtn" onClick={writeUserData5}>PUSH</button>
             <p>{url}</p>
                 </div>
@@ -171,13 +180,13 @@ function GenerateLinks(props){
             return(
                 <div>
                 <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
-                    <input className = "spacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link1" value={link1} onChange={(e) => setLink1(e.target.value)}/> 
-            <input className = "spacing" type = "url" placeholder="Enter link2" value={link2} onChange={(e) => setLink2(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link3" value={link3} onChange={(e) => setLink3(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link4" value={link4} onChange={(e) => setLink4(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link5" value={link5} onChange={(e) => setLink5(e.target.value)}/>
-            <input className = "spacing" type = "url" placeholder="Enter link6" value={link6} onChange={(e) => setLink6(e.target.value)}/>
+                    {enterName}
+                    {enterLink1}
+                    {enterLink2}
+                    {enterLink3}
+                    {enterLink4}
+                    {enterLink5}
+                    {enterLink6}
             <button id = "pushBtn" onClick={writeUserData6}>PUSH</button>
             <p>{url}</p>
                 </div>

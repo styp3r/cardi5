@@ -16,7 +16,7 @@ app.get("/:id", (req, res)=>{
             res.write("<h3 style = 'display: inline-block; margin-left: 50%; transform: translateX(-50%); margin-top: 10vmax;'>"+data.username+"</h3>");
             for(let i = 0; i < (entries.length-2); i++){
 
-                var color = "#f2f2f2";
+                var color = "#999999";
                 var socialName = "default";
 
                 for(let j = 0; j< social.length; j++){
@@ -29,7 +29,7 @@ app.get("/:id", (req, res)=>{
                         break;
                     }
                 }
-                res.write("<h4 style = 'text-align: center; margin-left: 50%; transform: translateX(-50%); margin-top: 2vmax; width: 30vmin; border-radius: 2vmin ; background-color: "+color+"; padding: 2vmin;'><a style = 'text-decoration: none; color: #ffffff;' href = "+entries[i][1]+"/>"+socialName+"</h4>");
+                res.write("<h4 style = 'text-align: center; margin-left: 50%; transform: translateX(-50%); margin-top: 2vmax; width: 30vmin; border-radius: 2.5vmin ; background-color: "+color+"; padding: 2vmin;'><a style = 'display: block; text-decoration: none; color: "+color+";' href = "+entries[i][1]+"/>"+socialName+"</h4>");
             }
             res.send();
         }else{

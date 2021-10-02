@@ -96,6 +96,10 @@
   color: #0099ff;
 }
 
+.red{
+  color: #ff0000;
+}
+
 .heroButton:hover{
   cursor: pointer;
   background-color: #008ae6;

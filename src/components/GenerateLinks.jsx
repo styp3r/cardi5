@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import database from '../firebase';
-import { ref, set } from "firebase/database";
+import { ref, set, onValue } from "firebase/database";
 
 function GenerateLinks(props){
 
@@ -19,6 +19,7 @@ function GenerateLinks(props){
   const [link6Text , setLink6Text] = useState("");
   const [color, setColor] = useState("#000000");
   const [name , setName] = useState("");
+  const [error, setError] = useState("");
   
   const [url, setUrl] = useState();
 
@@ -41,14 +42,28 @@ function GenerateLinks(props){
    // Push Function
    function writeUserData1() {
     const db = database;
-    var uniqueId = Math.floor(Math.random()*100000);
-    setUrl("http://localhost:4000/" + name+ uniqueId);
-            set(ref(db, 'users/'+name + uniqueId), {
+    var flag = 0;
+    
+    const starCountRef = ref(db, 'users/'+name);
+    onValue(starCountRef, (snapshot) => {
+        var firstName = snapshot.child("username").val();
+        if(firstName !==name && flag === 0){
+          flag = 1;
+          setError("");
+    setUrl("http://localhost:4000/" + name);
+            set(ref(db, 'users/'+name), {
               username: name,
               zcolor: color,
               link1: link1,
               link1Text : link1Text
-            }); 
+            });
+            
+        } else if (flag!==1){
+          setError("Username already taken!");
+        }
+
+    });
+     
       }
 
       function writeUserData2() {
@@ -155,6 +170,7 @@ function GenerateLinks(props){
                 <div>
                     <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
                     {enterName}
+                    <p className = "red">{error}</p>
                     <div className = "linkInputContainer">
                         {enterLink1Text}
                         {enterLink1}

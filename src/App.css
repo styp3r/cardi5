@@ -165,13 +165,14 @@
   padding: 5vmin;
 }
 
-.colorPicker{
+.colorPicker1, .colorPicker2{
   background-color: #d9d9d9;
   padding: 1vmin;
   border: none;
   height: 5vmin;
-  width: 15vmax;
+  width: 5vmax;
   border-radius: 1vmin;
+  margin: 0 1vmin 0 1vmin;
   cursor: pointer;
 }
 

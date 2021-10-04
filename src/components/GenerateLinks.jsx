@@ -17,7 +17,8 @@ function GenerateLinks(props){
   const [link5Text , setLink5Text] = useState("");
   const [link6 , setLink6] = useState(""); 
   const [link6Text , setLink6Text] = useState("");
-  const [color, setColor] = useState("#66ffff");
+  const [color, setColor] = useState("#ffffff");
+  const [colorTop, setColorTop] = useState("#66ffff");
   const [name , setName] = useState("");
   const [error, setError] = useState("");
   const [url, setUrl] = useState();
@@ -52,7 +53,7 @@ function GenerateLinks(props){
     setUrl("http://localhost:4000/" + name);
             set(ref(db, 'users/'+name), {
               username: name,
-              zcolor: color,
+              zcolor: [colorTop, color],
               link1: link1,
               link1Text : link1Text
             });
@@ -78,7 +79,7 @@ function GenerateLinks(props){
         setUrl("http://localhost:4000/" + name);
                 set(ref(db, 'users/'+name), {
                   username: name,
-                  zcolor: color,
+                  zcolor: [colorTop, color],
                   link1: link1,
                   link1Text : link1Text,
                   link2: link2,
@@ -106,7 +107,7 @@ function GenerateLinks(props){
             setUrl("http://localhost:4000/" + name);
                     set(ref(db, 'users/'+name), {
                       username: name,
-                      zcolor: color,
+                      zcolor: [colorTop, color],
                       link1: link1,
                       link1Text : link1Text,
                       link2: link2,
@@ -136,7 +137,7 @@ function GenerateLinks(props){
                 setUrl("http://localhost:4000/" + name);
                         set(ref(db, 'users/'+name), {
                           username: name,
-                          zcolor: color,
+                          zcolor: [colorTop, color],
                           link1: link1,
                           link1Text : link1Text,
                           link2: link2,
@@ -168,7 +169,7 @@ function GenerateLinks(props){
                     setUrl("http://localhost:4000/" + name);
                             set(ref(db, 'users/'+name), {
                               username: name,
-                              zcolor: color,
+                              zcolor: [colorTop, color],
                               link1: link1,
                               link1Text : link1Text,
                               link2: link2,
@@ -202,7 +203,7 @@ function GenerateLinks(props){
                         setUrl("http://localhost:4000/" + name);
                                 set(ref(db, 'users/'+name), {
                                   username: name,
-                                  zcolor: color,
+                                  zcolor: [colorTop, color],
                                   link1: link1,
                                   link1Text : link1Text,
                                   link2: link2,
@@ -249,7 +250,8 @@ function GenerateLinks(props){
                     </div>
                     <div className = "colorPickerContainer">
                     <p>Choose a background theme</p>
-                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
+                    <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div> 
                     <button id = "uploadBtn" onClick={writeUserData1}>Create</button>
                     <p>{url}</p>
@@ -272,7 +274,8 @@ function GenerateLinks(props){
                     </div>
                     <div className = "colorPickerContainer">
                     <p>Choose a background theme</p>
-                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
+                    <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div> 
             <button id = "uploadBtn" onClick={writeUserData2}>Create</button>
             <p>{url}</p>
@@ -299,7 +302,8 @@ function GenerateLinks(props){
                     </div>
                     <div className = "colorPickerContainer">
                     <p>Choose a background theme</p>
-                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
+                    <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div> 
             <button id = "uploadBtn" onClick={writeUserData3}>Create</button>
             <p>{url}</p>
@@ -330,7 +334,8 @@ function GenerateLinks(props){
                     </div>
                     <div className = "colorPickerContainer">
                     <p>Choose a background theme</p>
-                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
+                    <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/> 
                     </div>
             <button id = "uploadBtn" onClick={writeUserData4}>Create</button>
             <p>{url}</p>
@@ -365,7 +370,8 @@ function GenerateLinks(props){
                     </div>
                     <div className = "colorPickerContainer">
                     <p>Choose a background theme</p>
-                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
+                    <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div>
             <button id = "uploadBtn" onClick={writeUserData5}>Create</button>
             <p>{url}</p>
@@ -404,7 +410,8 @@ function GenerateLinks(props){
                     </div>
                     <div className = "colorPickerContainer">
                     <p>Choose a background theme</p>
-                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
+                    <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div>
             <button id = "uploadBtn" onClick={writeUserData6}>Create</button>
             <p>{url}</p>

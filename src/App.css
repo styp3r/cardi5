@@ -1,5 +1,6 @@
 #addNewLink, #removeLink{
   padding: 2vmin;
+  margin: 0 0 2vmin 0;
   background-color: #0099ff;
   border: none;
   color: #ffffff;
@@ -10,6 +11,22 @@
 #addNewLink{
    width: 30vmax;
    margin: 0 2vmin 0 0;
+}
+
+#addNewLink:hover, #removeLink:hover, #uploadBtn:hover{
+  cursor: pointer;
+  background-color: #008ae6;
+}
+
+#uploadBtn{
+  padding: 2vmin;   
+  width: 34vmax;
+  margin: 0 2vmin 0 0;
+  background-color: #0099ff;
+  border: none;
+  color: #ffffff;
+  border-radius: 2vmin;
+  cursor: pointer;
 }
 
 .App {
@@ -113,8 +130,10 @@
 .nameSpacing{
   display: block;
   padding: 1vmin;
-  margin: 1vmin 1vmin 5vmin 1vmin;
-  border: none;
+  width: 15vmax;
+  margin: 1vmin 1vmin 1vmin 0;
+  border: solid;
+  border-color: #f2f2f2;
   border-radius: 1vmin;
 }
 
@@ -122,30 +141,92 @@
   display: block;
   padding: 1vmin;
   margin: 1vmin;
-  width: 30vmin;
+  width: 25vmax;
   border: none;
   border-radius: 1vmin;
 }
 
 .linkInputContainer{
   padding: 3vmin;
-  width: 35vmin;
-  margin: 1vmin;
-  background-color: aqua;
+  width: 30vmax;
+  margin: 1vmin 1vmin 1vmin 0;
   border-radius: 1vmin;
   background-color: #f2f2f2;
 }
 
-.dashboardHeader{
-  margin: 0 0 5vmin 17vmin;
+.creatorDashboardTable{
+  position: absolute;
+  left: 30vmin;
 }
 
 .creatorDashboard{
-  position: absolute;
-  left: 15vmin;
   display: inline-block;
-  width: 50vmax;
-  height: 55vmin;
   border-radius: 2vmin;
   padding: 5vmin;
 }
+
+.colorPicker{
+  background-color: #d9d9d9;
+  padding: 1vmin;
+  border: none;
+  height: 5vmin;
+  width: 15vmax;
+  border-radius: 1vmin;
+  cursor: pointer;
+}
+
+.colorPickerContainer{
+  padding: 0.5vmin 3vmin 2vmin 3vmin;
+  width: 30vmax;
+  margin: 1vmin 1vmin 1vmin 0;
+  border-radius: 1vmin;
+  background-color: #f2f2f2;
+}
+
+.enterNameContainer{
+  padding: 0.5vmin 3vmin 2vmin 3vmin;
+  width: 30vmax;
+  margin: 1vmin 1vmin 1vmin 0;
+  border-radius: 1vmin;
+  background-color: #f2f2f2;
+}
+
+#simulation{
+  position: fixed;
+  top: 10vmax;
+  right: 15vmax;
+  overflow-y: auto;
+  width: 20vmax;
+  height: 35vmax;
+  background-image: linear-gradient(aqua, #ffffff);
+  border: solid;
+  border-color: #0099ff;
+  border-radius: 5vmin;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.simContainer{
+  width: 10vmax;
+}
+
+#dp{
+  background-color: #737373;
+  border-radius: 2vmin;
+  width: 10vmin;
+  height: 10vmin;
+  margin: 7vmin auto 1vmin auto;
+  display: none;
+}
+
+#one, #two, #three, #four, #five, #six{
+  display: none;
+  opacity: 0.7;
+  background-color: #8c8c8c;
+  border-radius: 1.5vmin;
+  width: 20vmin;
+  height: 4vmin;
+  margin: 4vmin auto 1vmin auto;
+}
+

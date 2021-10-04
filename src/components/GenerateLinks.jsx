@@ -17,25 +17,25 @@ function GenerateLinks(props){
   const [link5Text , setLink5Text] = useState("");
   const [link6 , setLink6] = useState(""); 
   const [link6Text , setLink6Text] = useState("");
-  const [color, setColor] = useState("#000000");
+  const [color, setColor] = useState("#66ffff");
   const [name , setName] = useState("");
   const [error, setError] = useState("");
-  
+  var col = color;
   const [url, setUrl] = useState();
 
-  const enterName = <input className = "nameSpacing" type = "text" placeholder="Enter your name" value={name} onChange={(e) => setName(e.target.value)}/>;
+  const enterName = <input className = "nameSpacing" type = "text" placeholder="What do we call you?" value={name} onClick = {()=> document.getElementById("dp").style.display= "block"} onChange={(e) => setName(e.target.value)}/>;
   const enterLink1 = <input className = "spacing" type = "url" placeholder="https://" value={link1} onChange={(e) => setLink1(e.target.value)}/>;
-  const enterLink1Text = <input className = "spacing" type = "text" placeholder="Title" value={link1Text} onChange={(e) => setLink1Text(e.target.value)}/>;
+  const enterLink1Text = <input className = "spacing" type = "text" placeholder="Title" value={link1Text} onClick = {()=> document.getElementById("one").style.display= "block"} onChange={(e) => setLink1Text(e.target.value)}/>;
   const enterLink2 = <input className = "spacing" type = "url" placeholder="https://" value={link2} onChange={(e) => setLink2(e.target.value)}/>;
-  const enterLink2Text = <input className = "spacing" type = "text" placeholder="Title" value={link2Text} onChange={(e) => setLink2Text(e.target.value)}/>;
+  const enterLink2Text = <input className = "spacing" type = "text" placeholder="Title" value={link2Text} onClick = {()=> document.getElementById("two").style.display= "block"} onChange={(e) => setLink2Text(e.target.value)}/>;
   const enterLink3 = <input className = "spacing" type = "url" placeholder="https://" value={link3} onChange={(e) => setLink3(e.target.value)}/>;
-  const enterLink3Text = <input className = "spacing" type = "text" placeholder="Title" value={link3Text} onChange={(e) => setLink3Text(e.target.value)}/>;
+  const enterLink3Text = <input className = "spacing" type = "text" placeholder="Title" value={link3Text} onClick = {()=> document.getElementById("three").style.display= "block"} onChange={(e) => setLink3Text(e.target.value)}/>;
   const enterLink4 = <input className = "spacing" type = "url" placeholder="https://" value={link4} onChange={(e) => setLink4(e.target.value)}/>;
-  const enterLink4Text = <input className = "spacing" type = "text" placeholder="Title" value={link4Text} onChange={(e) => setLink4Text(e.target.value)}/>;
+  const enterLink4Text = <input className = "spacing" type = "text" placeholder="Title" value={link4Text} onClick = {()=> document.getElementById("four").style.display= "block"} onChange={(e) => setLink4Text(e.target.value)}/>;
   const enterLink5 = <input className = "spacing" type = "url" placeholder="https://" value={link5} onChange={(e) => setLink5(e.target.value)}/>;
-  const enterLink5Text = <input className = "spacing" type = "text" placeholder="Title" value={link5Text} onChange={(e) => setLink5Text(e.target.value)}/>;
+  const enterLink5Text = <input className = "spacing" type = "text" placeholder="Title" value={link5Text} onClick = {()=> document.getElementById("five").style.display= "block"} onChange={(e) => setLink5Text(e.target.value)}/>;
   const enterLink6 = <input className = "spacing" type = "url" placeholder="https://" value={link6} onChange={(e) => setLink6(e.target.value)}/>;
-  const enterLink6Text = <input className = "spacing" type = "text" placeholder="Title" value={link6Text} onChange={(e) => setLink6Text(e.target.value)}/>;
+  const enterLink6Text = <input className = "spacing" type = "text" placeholder="Title" value={link6Text} onClick = {()=> document.getElementById("six").style.display= "block"} onChange={(e) => setLink6Text(e.target.value)}/>;
 
 
 
@@ -166,24 +166,33 @@ function GenerateLinks(props){
 
     switch(props.count){
         case 1:
+          
             return (
                 <div>
-                    <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
+                  <div className = "enterNameContainer">
+                    <p>Give us a username</p>
                     {enterName}
+                  </div>
                     <p className = "red">{error}</p>
                     <div className = "linkInputContainer">
                         {enterLink1Text}
                         {enterLink1}
+                    </div>
+                    <div className = "colorPickerContainer">
+                    <p>Choose a background theme</p>
+                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
                     </div> 
-                    <button id = "pushBtn" onClick={writeUserData1}>Create</button>
+                    <button id = "uploadBtn" onClick={writeUserData1}>Create</button>
                     <p>{url}</p>
                 </div>
             );
         case 2:
             return(
                 <div>
-                <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
+                  <div className = "enterNameContainer">
+                    <p>Give us a username</p>
                     {enterName}
+                  </div>
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -192,15 +201,21 @@ function GenerateLinks(props){
                     {enterLink2Text}
                     {enterLink2}
                     </div>
-            <button id = "pushBtn" onClick={writeUserData2}>Create</button>
+                    <div className = "colorPickerContainer">
+                    <p>Choose a background theme</p>
+                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    </div> 
+            <button id = "uploadBtn" onClick={writeUserData2}>Create</button>
             <p>{url}</p>
                 </div>
             );
         case 3:
             return(
                 <div>
-                <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
+                    <div className = "enterNameContainer">
+                    <p>Give us a username</p>
                     {enterName}
+                    </div>
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -213,15 +228,21 @@ function GenerateLinks(props){
                     {enterLink3Text}
                     {enterLink3}
                     </div>
-            <button id = "pushBtn" onClick={writeUserData3}>Create</button>
+                    <div className = "colorPickerContainer">
+                    <p>Choose a background theme</p>
+                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    </div> 
+            <button id = "uploadBtn" onClick={writeUserData3}>Create</button>
             <p>{url}</p>
                 </div>
             );
         case 4:
             return(
                 <div>
-                <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
+                    <div className = "enterNameContainer">
+                    <p>Give us a username</p>
                     {enterName}
+                    </div>
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -238,15 +259,21 @@ function GenerateLinks(props){
                     {enterLink4Text}
                     {enterLink4}
                     </div>
-            <button id = "pushBtn" onClick={writeUserData4}>Create</button>
+                    <div className = "colorPickerContainer">
+                    <p>Choose a background theme</p>
+                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    </div>
+            <button id = "uploadBtn" onClick={writeUserData4}>Create</button>
             <p>{url}</p>
                 </div>
             );
         case 5:
             return(
                 <div>
-                <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
+                    <div className = "enterNameContainer">
+                    <p>Give us a username</p>
                     {enterName}
+                    </div>
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -267,15 +294,21 @@ function GenerateLinks(props){
                     {enterLink5Text}
                     {enterLink5}
                     </div>
-            <button id = "pushBtn" onClick={writeUserData5}>Create</button>
+                    <div className = "colorPickerContainer">
+                    <p>Choose a background theme</p>
+                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    </div>
+            <button id = "uploadBtn" onClick={writeUserData5}>Create</button>
             <p>{url}</p>
                 </div>
             );
         case 6:
             return(
                 <div>
-                <input type="color" value={color} onChange = {(c)=>setColor(c.target.value) }/>
+                    <div className = "enterNameContainer">
+                    <p>Give us a username</p>
                     {enterName}
+                    </div>
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -300,7 +333,11 @@ function GenerateLinks(props){
                     {enterLink6Text}
                     {enterLink6}
                     </div>
-            <button id = "pushBtn" onClick={writeUserData6}>Create</button>
+                    <div className = "colorPickerContainer">
+                    <p>Choose a background theme</p>
+                    <input className = "colorPicker" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${c.target.value}, #ffffff)`; } }/>
+                    </div>
+            <button id = "uploadBtn" onClick={writeUserData6}>Create</button>
             <p>{url}</p>
                 </div>
             ); 

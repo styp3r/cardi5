@@ -3,7 +3,7 @@ import database from './src/firebase.js';
 import { ref, onValue } from "firebase/database";
 
 const app = express();
-const social = ["facebook", "#3b5998", "instagram", "#ff1a75", "behance", "#1769ff" ,"snapchat", "#fffc00","twitter", "#55acee", "linkedin", "#007bb5" ,"youtube", "#ff0000", "tiktok", "#333333", "reddit", "#ff4500", "tumblr", "#32506d", "apple", "#b3b3b3", "spotify", "#00e461"];
+const social = ["github", "#000000", "facebook", "#3b5998", "instagram", "#ff1a75", "behance", "#1769ff" ,"snapchat", "#fffc00","twitter", "#55acee", "linkedin", "#007bb5" ,"youtube", "#ff0000", "tiktok", "#333333", "reddit", "#ff4500", "tumblr", "#32506d", "apple", "#b3b3b3", "spotify", "#00e461"];
 
 app.get("/:id", (req, res)=>{
     const db = database;
@@ -30,7 +30,7 @@ app.get("/:id", (req, res)=>{
                         break;
                     }
                 }
-                res.write("<h4 style = 'text-align: center; margin-left: 50%; transform: translateX(-50%); margin-top: 2vmax; width: 30vmin; border-radius: 2.5vmin ; background-color: "+color+"; padding: 2vmin;'><i style = 'color: #ffffff; margin: 0 2vmin 2vmin 2vmin;' class='"+type+" fa-"+socialName+"'></i><a style = 'display: block; text-decoration: none; color: #ffffff;' href = "+entries[i][1]+" target='_blank'/>"+entries[i+1][1]+"</h4>");
+                res.write("<h4 className = 'tabs' style = 'text-align: left; margin-left: 50%; transform: translateX(-50%); margin-top: 2vmax; width: 30vmin; border-radius: 2.5vmin ; background-color: "+color+"; padding: 2vmin;'><i style = 'color: #ffffff; margin: 0 2vmin 2vmin 2vmin;' class='"+type+" fa-"+socialName+"'></i><a style = 'display: block; text-decoration: none; color: #ffffff;' href = "+entries[i][1]+" target='_blank'/>"+entries[i+1][1]+"</h4>");
             }
             res.send();
         }else{

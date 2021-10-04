@@ -20,7 +20,6 @@ function GenerateLinks(props){
   const [color, setColor] = useState("#66ffff");
   const [name , setName] = useState("");
   const [error, setError] = useState("");
-  var col = color;
   const [url, setUrl] = useState();
 
   const enterName = <input className = "nameSpacing" type = "text" placeholder="What do we call you?" value={name} onClick = {()=> document.getElementById("dp").style.display= "block"} onChange={(e) => setName(e.target.value)}/>;
@@ -68,39 +67,74 @@ function GenerateLinks(props){
 
       function writeUserData2() {
         const db = database;
-        var uniqueId = Math.floor(Math.random()*100000);
-        setUrl("http://localhost:4000/" + name+ uniqueId);
-                set(ref(db, 'users/'+name + uniqueId), {
+        var flag = 0;
+        
+        const starCountRef = ref(db, 'users/'+name);
+        onValue(starCountRef, (snapshot) => {
+            var firstName = snapshot.child("username").val();
+            if(firstName !==name && flag === 0){
+              flag = 1;
+              setError("");
+        setUrl("http://localhost:4000/" + name);
+                set(ref(db, 'users/'+name), {
                   username: name,
                   zcolor: color,
                   link1: link1,
                   link1Text : link1Text,
                   link2: link2,
                   link2Text : link2Text
-                }); 
+                });
+                
+            } else if (flag!==1){
+              setError("Username already taken!");
+            }
+    
+        });
+         
           }
 
           function writeUserData3() {
             const db = database;
-            var uniqueId = Math.floor(Math.random()*100000);
-            setUrl("http://localhost:4000/" + name+ uniqueId);
-                    set(ref(db, 'users/'+name + uniqueId), {
+            var flag = 0;
+            
+            const starCountRef = ref(db, 'users/'+name);
+            onValue(starCountRef, (snapshot) => {
+                var firstName = snapshot.child("username").val();
+                if(firstName !==name && flag === 0){
+                  flag = 1;
+                  setError("");
+            setUrl("http://localhost:4000/" + name);
+                    set(ref(db, 'users/'+name), {
                       username: name,
                       zcolor: color,
                       link1: link1,
                       link1Text : link1Text,
                       link2: link2,
                       link2Text : link2Text,
-                      link3: link3, 
-                      link3Text : link3Text
-                    }); 
+                      link3: link3,
+                      link3Text: link3Text
+                    });
+                    
+                } else if (flag!==1){
+                  setError("Username already taken!");
+                }
+        
+            });
+             
               }
 
               function writeUserData4() {
                 const db = database;
-                var uniqueId = Math.floor(Math.random()*100000);
-                setUrl("http://localhost:4000/" + name+ uniqueId);
-                        set(ref(db, 'users/'+name + uniqueId), {
+                var flag = 0;
+                
+                const starCountRef = ref(db, 'users/'+name);
+                onValue(starCountRef, (snapshot) => {
+                    var firstName = snapshot.child("username").val();
+                    if(firstName !==name && flag === 0){
+                      flag = 1;
+                      setError("");
+                setUrl("http://localhost:4000/" + name);
+                        set(ref(db, 'users/'+name), {
                           username: name,
                           zcolor: color,
                           link1: link1,
@@ -108,37 +142,65 @@ function GenerateLinks(props){
                           link2: link2,
                           link2Text : link2Text,
                           link3: link3,
-                          link3Text : link3Text,
+                          link3Text: link3Text,
                           link4: link4,
-                          link4Text : link4Text
-                        }); 
+                          link4Text: link4Text
+                        });
+                        
+                    } else if (flag!==1){
+                      setError("Username already taken!");
+                    }
+            
+                });
+                 
                   }
 
                   function writeUserData5() {
                     const db = database;
-                    var uniqueId = Math.floor(Math.random()*100000);
-                    setUrl("http://localhost:4000/" + name+ uniqueId);
-                            set(ref(db, 'users/'+name + uniqueId), {
+                    var flag = 0;
+                    
+                    const starCountRef = ref(db, 'users/'+name);
+                    onValue(starCountRef, (snapshot) => {
+                        var firstName = snapshot.child("username").val();
+                        if(firstName !==name && flag === 0){
+                          flag = 1;
+                          setError("");
+                    setUrl("http://localhost:4000/" + name);
+                            set(ref(db, 'users/'+name), {
                               username: name,
                               zcolor: color,
                               link1: link1,
                               link1Text : link1Text,
                               link2: link2,
-                              link2Text: link2Text,
+                              link2Text : link2Text,
                               link3: link3,
-                              link3Text : link3Text,
+                              link3Text: link3Text,
                               link4: link4,
-                              link4Text : link4Text,
-                              link5: link5, 
-                              link5Text : link5Text
-                            }); 
+                              link4Text: link4Text,
+                              link5: link5,
+                              link5Text: link5Text
+                            });
+                            
+                        } else if (flag!==1){
+                          setError("Username already taken!");
+                        }
+                
+                    });
+                     
                       }
 
                       function writeUserData6() {
                         const db = database;
-                        var uniqueId = Math.floor(Math.random()*100000);
-                        setUrl("http://localhost:4000/" + name+ uniqueId);
-                                set(ref(db, 'users/'+name + uniqueId), {
+                        var flag = 0;
+                        
+                        const starCountRef = ref(db, 'users/'+name);
+                        onValue(starCountRef, (snapshot) => {
+                            var firstName = snapshot.child("username").val();
+                            if(firstName !==name && flag === 0){
+                              flag = 1;
+                              setError("");
+                        setUrl("http://localhost:4000/" + name);
+                                set(ref(db, 'users/'+name), {
                                   username: name,
                                   zcolor: color,
                                   link1: link1,
@@ -151,9 +213,16 @@ function GenerateLinks(props){
                                   link4Text: link4Text,
                                   link5: link5,
                                   link5Text: link5Text,
-                                  link6: link6, 
+                                  link6: link6,
                                   link6Text: link6Text
-                                }); 
+                                });
+                                
+                            } else if (flag!==1){
+                              setError("Username already taken!");
+                            }
+                    
+                        });
+                         
                           }
 
       if(props.count > 5){

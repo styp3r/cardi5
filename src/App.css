@@ -231,12 +231,15 @@
   border-radius: 2vmin;
 }
 
+
 #uploadDataBtn{
-  background-color: #0099ff;
+  background-color: #00e600;
+  width: 12vmin;
   border: none;
   padding: 1vmin;
   color: white;
   border-radius: 1vmin;
+  cursor: pointer;
 }
 
 #userIcon{

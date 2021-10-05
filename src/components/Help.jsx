@@ -40,7 +40,7 @@ uploadTask.on('state_changed',
     // Handle successful uploads on complete
     // For instance, get the download URL: https://firebasestorage.googleapis.com/...
     getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-      console.log('File available at', downloadURL);
+      console.log('File is available at', downloadURL);
     });
   }
 );

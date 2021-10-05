@@ -218,7 +218,14 @@
   width: 10vmin;
   height: 10vmin;
   margin: 7vmin auto 1vmin auto;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#userIcon{
+  font-size: 5vmin;
+  color: #ffffff;
 }
 
 #one, #two, #three, #four, #five, #six{

@@ -3,13 +3,13 @@ import storage from '../firebaseStorage';
 import React, {useState} from 'react';
 
 
-function AvatarUpload(){
+function AvatarUpload(props){
     
 const [img, setImg] = useState();
 
     function uploadData(){
 console.log(img.name);
-const storageRef = ref(storage, 'images/' + img.name); //JUST THE FILE NAME NOT THE ENTIRE FILE OBJECT
+const storageRef = ref(storage, 'images/'+ props.name + '/'+ img.name); 
 
 const uploadTask = uploadBytesResumable(storageRef, img);
 

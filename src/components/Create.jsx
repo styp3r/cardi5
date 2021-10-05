@@ -26,7 +26,7 @@ function Create(){
                     <td>
                           <div id = "simulation">
                             <div className = "simContainer">
-                                <div id = "dp"></div>
+                                <div id = "dp"><i id = "userIcon" class="far fa-smile-wink"></i></div>
                                 <div id = "one"></div>
                                 <div id = "two"></div>
                                 <div id = "three"></div>

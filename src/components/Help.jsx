@@ -1,9 +1,7 @@
 import React from 'react';
 
 function Help(){
-  return(
-    <div>Help</div>
-  );
+  return(<h1>Help</h1>);
 }
 
 export default Help;

@@ -24,7 +24,7 @@ function GenerateLinks(props){
   const [error, setError] = useState("");
   const [url, setUrl] = useState();
 
-  const enterName = <input className = "nameSpacing" type = "text" placeholder="What do we call you?" value={name} onClick = {()=> document.getElementById("dp").style.display= "block"} onChange={(e) => setName(e.target.value)}/>;
+  const enterName = <input className = "nameSpacing" type = "text" placeholder="What do we call you?" value={name} onChange={(e) => setName(e.target.value)}/>;
   const enterLink1 = <input className = "spacing" type = "url" placeholder="https://" value={link1} onChange={(e) => setLink1(e.target.value)}/>;
   const enterLink1Text = <input className = "spacing" type = "text" placeholder="Title" value={link1Text} onClick = {()=> document.getElementById("one").style.display= "block"} onChange={(e) => setLink1Text(e.target.value)}/>;
   const enterLink2 = <input className = "spacing" type = "url" placeholder="https://" value={link2} onChange={(e) => setLink2(e.target.value)}/>;
@@ -253,7 +253,7 @@ function GenerateLinks(props){
                     {enterName}
                   </div>
                     <p className = "red">{error}</p>
-                    <AvatarUpload />
+                    <AvatarUpload name = {name}/>
                     <button id = "uploadBtn" onClick={writeUserData1}>Create</button>
                     <p>{url}</p>
                 </div>
@@ -279,7 +279,7 @@ function GenerateLinks(props){
                     {enterName}
                   </div>
                   <p className = "red">{error}</p>
-                  <AvatarUpload />
+                  <AvatarUpload name = {name}/>
             <button id = "uploadBtn" onClick={writeUserData2}>Create</button>
             <p>{url}</p>
                 </div>
@@ -309,7 +309,7 @@ function GenerateLinks(props){
                     {enterName}
                     </div>
                     <p className = "red">{error}</p>
-                    <AvatarUpload />
+                    <AvatarUpload name = {name}/>
             <button id = "uploadBtn" onClick={writeUserData3}>Create</button>
             <p>{url}</p>
                 </div>
@@ -343,7 +343,7 @@ function GenerateLinks(props){
                     {enterName}
                     </div>
                     <p className = "red">{error}</p>
-                    <AvatarUpload />
+                    <AvatarUpload name = {name}/>
             <button id = "uploadBtn" onClick={writeUserData4}>Create</button>
             <p>{url}</p>
                 </div>
@@ -381,7 +381,7 @@ function GenerateLinks(props){
                     {enterName}
                     </div>
                     <p className = "red">{error}</p>
-                    <AvatarUpload />
+                    <AvatarUpload name = {name}/>
             <button id = "uploadBtn" onClick={writeUserData5}>Create</button>
             <p>{url}</p>
                 </div>
@@ -423,7 +423,7 @@ function GenerateLinks(props){
                     {enterName}
                     </div>
                     <p className = "red">{error}</p>
-                    <AvatarUpload />
+                    <AvatarUpload name = {name}/>
             <button id = "uploadBtn" onClick={writeUserData6}>Create</button>
             <p>{url}</p>
                 </div>

@@ -239,12 +239,6 @@ function GenerateLinks(props){
           
             return (
                 <div>
-                  <div className = "enterNameContainer">
-                    <p>Give us a username</p>
-                    {enterName}
-                  </div>
-                    <p className = "red">{error}</p>
-                    <AvatarUpload />
                     <div className = "linkInputContainer">
                         {enterLink1Text}
                         {enterLink1}
@@ -254,6 +248,12 @@ function GenerateLinks(props){
                     <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div> 
+                    <div className = "enterNameContainer">
+                    <p>Give us a username</p>
+                    {enterName}
+                  </div>
+                    <p className = "red">{error}</p>
+                    <AvatarUpload />
                     <button id = "uploadBtn" onClick={writeUserData1}>Create</button>
                     <p>{url}</p>
                 </div>
@@ -261,12 +261,6 @@ function GenerateLinks(props){
         case 2:
             return(
                 <div>
-                  <div className = "enterNameContainer">
-                    <p>Give us a username</p>
-                    {enterName}
-                  </div>
-                  <p className = "red">{error}</p>
-                  <AvatarUpload />
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -280,6 +274,12 @@ function GenerateLinks(props){
                     <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div> 
+                    <div className = "enterNameContainer">
+                    <p>Give us a username</p>
+                    {enterName}
+                  </div>
+                  <p className = "red">{error}</p>
+                  <AvatarUpload />
             <button id = "uploadBtn" onClick={writeUserData2}>Create</button>
             <p>{url}</p>
                 </div>
@@ -287,12 +287,6 @@ function GenerateLinks(props){
         case 3:
             return(
                 <div>
-                    <div className = "enterNameContainer">
-                    <p>Give us a username</p>
-                    {enterName}
-                    </div>
-                    <p className = "red">{error}</p>
-                    <AvatarUpload />
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -310,6 +304,12 @@ function GenerateLinks(props){
                     <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div> 
+                    <div className = "enterNameContainer">
+                    <p>Give us a username</p>
+                    {enterName}
+                    </div>
+                    <p className = "red">{error}</p>
+                    <AvatarUpload />
             <button id = "uploadBtn" onClick={writeUserData3}>Create</button>
             <p>{url}</p>
                 </div>
@@ -317,12 +317,6 @@ function GenerateLinks(props){
         case 4:
             return(
                 <div>
-                    <div className = "enterNameContainer">
-                    <p>Give us a username</p>
-                    {enterName}
-                    </div>
-                    <p className = "red">{error}</p>
-                    <AvatarUpload />
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -344,6 +338,12 @@ function GenerateLinks(props){
                     <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/> 
                     </div>
+                    <div className = "enterNameContainer">
+                    <p>Give us a username</p>
+                    {enterName}
+                    </div>
+                    <p className = "red">{error}</p>
+                    <AvatarUpload />
             <button id = "uploadBtn" onClick={writeUserData4}>Create</button>
             <p>{url}</p>
                 </div>
@@ -351,12 +351,6 @@ function GenerateLinks(props){
         case 5:
             return(
                 <div>
-                    <div className = "enterNameContainer">
-                    <p>Give us a username</p>
-                    {enterName}
-                    </div>
-                    <p className = "red">{error}</p>
-                    <AvatarUpload />
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -382,6 +376,12 @@ function GenerateLinks(props){
                     <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div>
+                    <div className = "enterNameContainer">
+                    <p>Give us a username</p>
+                    {enterName}
+                    </div>
+                    <p className = "red">{error}</p>
+                    <AvatarUpload />
             <button id = "uploadBtn" onClick={writeUserData5}>Create</button>
             <p>{url}</p>
                 </div>
@@ -389,12 +389,6 @@ function GenerateLinks(props){
         case 6:
             return(
                 <div>
-                    <div className = "enterNameContainer">
-                    <p>Give us a username</p>
-                    {enterName}
-                    </div>
-                    <p className = "red">{error}</p>
-                    <AvatarUpload />
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -424,6 +418,12 @@ function GenerateLinks(props){
                     <input className = "colorPicker2" type = "color" value={colorTop} onChange = {(f) => {setColorTop(f.target.value);document.getElementById("simulation").style.background = `linear-gradient(${f.target.value}, ${color})`;}} />
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div>
+                    <div className = "enterNameContainer">
+                    <p>Give us a username</p>
+                    {enterName}
+                    </div>
+                    <p className = "red">{error}</p>
+                    <AvatarUpload />
             <button id = "uploadBtn" onClick={writeUserData6}>Create</button>
             <p>{url}</p>
                 </div>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import database from '../firebase';
 import { ref, set, onValue } from "firebase/database";
+import AvatarUpload from './AvatarUpload';
 
 function GenerateLinks(props){
 
@@ -21,6 +22,7 @@ function GenerateLinks(props){
   const [colorTop, setColorTop] = useState("#66ffff");
   const [name , setName] = useState("");
   const [error, setError] = useState("");
+  const [img, setImg] = useState();
   const [url, setUrl] = useState();
 
   const enterName = <input className = "nameSpacing" type = "text" placeholder="What do we call you?" value={name} onClick = {()=> document.getElementById("dp").style.display= "block"} onChange={(e) => setName(e.target.value)}/>;
@@ -36,7 +38,6 @@ function GenerateLinks(props){
   const enterLink5Text = <input className = "spacing" type = "text" placeholder="Title" value={link5Text} onClick = {()=> document.getElementById("five").style.display= "block"} onChange={(e) => setLink5Text(e.target.value)}/>;
   const enterLink6 = <input className = "spacing" type = "url" placeholder="https://" value={link6} onChange={(e) => setLink6(e.target.value)}/>;
   const enterLink6Text = <input className = "spacing" type = "text" placeholder="Title" value={link6Text} onClick = {()=> document.getElementById("six").style.display= "block"} onChange={(e) => setLink6Text(e.target.value)}/>;
-
 
 
    // Push Function
@@ -244,6 +245,7 @@ function GenerateLinks(props){
                     {enterName}
                   </div>
                     <p className = "red">{error}</p>
+                    <AvatarUpload />
                     <div className = "linkInputContainer">
                         {enterLink1Text}
                         {enterLink1}
@@ -264,6 +266,8 @@ function GenerateLinks(props){
                     <p>Give us a username</p>
                     {enterName}
                   </div>
+                  <p className = "red">{error}</p>
+                  <AvatarUpload />
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -288,6 +292,8 @@ function GenerateLinks(props){
                     <p>Give us a username</p>
                     {enterName}
                     </div>
+                    <p className = "red">{error}</p>
+                    <AvatarUpload />
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -316,6 +322,8 @@ function GenerateLinks(props){
                     <p>Give us a username</p>
                     {enterName}
                     </div>
+                    <p className = "red">{error}</p>
+                    <AvatarUpload />
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -348,6 +356,8 @@ function GenerateLinks(props){
                     <p>Give us a username</p>
                     {enterName}
                     </div>
+                    <p className = "red">{error}</p>
+                    <AvatarUpload />
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}
@@ -384,6 +394,8 @@ function GenerateLinks(props){
                     <p>Give us a username</p>
                     {enterName}
                     </div>
+                    <p className = "red">{error}</p>
+                    <AvatarUpload />
                     <div className = "linkInputContainer">
                     {enterLink1Text}
                     {enterLink1}

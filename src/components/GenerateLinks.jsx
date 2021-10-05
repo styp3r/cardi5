@@ -22,7 +22,6 @@ function GenerateLinks(props){
   const [colorTop, setColorTop] = useState("#66ffff");
   const [name , setName] = useState("");
   const [error, setError] = useState("");
-  const [img, setImg] = useState();
   const [url, setUrl] = useState();
 
   const enterName = <input className = "nameSpacing" type = "text" placeholder="What do we call you?" value={name} onClick = {()=> document.getElementById("dp").style.display= "block"} onChange={(e) => setName(e.target.value)}/>;

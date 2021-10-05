@@ -2,6 +2,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import storage from '../firebaseStorage';
 import React, {useState} from 'react';
 import DefaultAvatar from '../images/defaultAvatar.jpg';
+import uploadImgURL from "../uploadImgURL";
 
 
 function AvatarUpload(props){
@@ -11,7 +12,7 @@ const [imgURL, setImgURL] = useState(DefaultAvatar);
 const [required, setRequired] = useState("");
 
     function uploadData(){
-
+//Uploading Image to Firebase Cloud Storage
 console.log(img.name);
 const storageRef = ref(storage, 'images/'+ props.name + '/'+ img.name); 
 
@@ -46,9 +47,11 @@ uploadTask.on('state_changed',
     getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
       console.log('File is available at', downloadURL);
       setImgURL(downloadURL);
+      {uploadImgURL(props.name, downloadURL)}
     });
   }
 );
+
     }
 
 

@@ -22,6 +22,7 @@ function GenerateLinks(props){
   const [colorTop, setColorTop] = useState("#66ffff");
   const [name , setName] = useState("");
   const [error, setError] = useState("");
+  const [required, setRequired] = useState("");
   const [url, setUrl] = useState();
 
   const enterName = <input className = "nameSpacing" type = "text" placeholder="What do we call you?" value={name} onChange={(e) => setName(e.target.value)}/>;
@@ -232,8 +233,6 @@ function GenerateLinks(props){
       }
 
 
-      
-
     switch(props.count){
         case 1:
           
@@ -249,12 +248,13 @@ function GenerateLinks(props){
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div> 
                     <div className = "enterNameContainer">
-                    <p>Give us a username</p>
+                    <p>Give us a username *</p>
                     {enterName}
                   </div>
                     <p className = "red">{error}</p>
                     <AvatarUpload name = {name}/>
-                    <button id = "uploadBtn" onClick={writeUserData1}>Create</button>
+                    <p className = "red" >{required}</p>
+                    <button id = "uploadBtn" onClick={()=>{if(name){setRequired(""); writeUserData1();}else{setRequired("Required fields cannot be empty!");}}}>Create</button>
                     <p>{url}</p>
                 </div>
             );
@@ -275,12 +275,13 @@ function GenerateLinks(props){
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div> 
                     <div className = "enterNameContainer">
-                    <p>Give us a username</p>
+                    <p>Give us a username *</p>
                     {enterName}
                   </div>
                   <p className = "red">{error}</p>
                   <AvatarUpload name = {name}/>
-            <button id = "uploadBtn" onClick={writeUserData2}>Create</button>
+                  <p className = "red" >{required}</p>
+                  <button id = "uploadBtn" onClick={()=>{if(name){setRequired(""); writeUserData2();}else{setRequired("Required fields cannot be empty!");}}}>Create</button>
             <p>{url}</p>
                 </div>
             );
@@ -305,12 +306,13 @@ function GenerateLinks(props){
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div> 
                     <div className = "enterNameContainer">
-                    <p>Give us a username</p>
+                    <p>Give us a username *</p>
                     {enterName}
                     </div>
                     <p className = "red">{error}</p>
                     <AvatarUpload name = {name}/>
-            <button id = "uploadBtn" onClick={writeUserData3}>Create</button>
+                    <p className = "red" >{required}</p>
+                    <button id = "uploadBtn" onClick={()=>{if(name){setRequired(""); writeUserData3();}else{setRequired("Required fields cannot be empty!");}}}>Create</button>
             <p>{url}</p>
                 </div>
             );
@@ -339,12 +341,13 @@ function GenerateLinks(props){
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/> 
                     </div>
                     <div className = "enterNameContainer">
-                    <p>Give us a username</p>
+                    <p>Give us a username *</p>
                     {enterName}
                     </div>
                     <p className = "red">{error}</p>
                     <AvatarUpload name = {name}/>
-            <button id = "uploadBtn" onClick={writeUserData4}>Create</button>
+                    <p className = "red" >{required}</p>
+                    <button id = "uploadBtn" onClick={()=>{if(name){setRequired(""); writeUserData4();}else{setRequired("Required fields cannot be empty!");}}}>Create</button>
             <p>{url}</p>
                 </div>
             );
@@ -377,12 +380,13 @@ function GenerateLinks(props){
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div>
                     <div className = "enterNameContainer">
-                    <p>Give us a username</p>
+                    <p>Give us a username *</p>
                     {enterName}
                     </div>
                     <p className = "red">{error}</p>
                     <AvatarUpload name = {name}/>
-            <button id = "uploadBtn" onClick={writeUserData5}>Create</button>
+                    <p className = "red" >{required}</p>
+                    <button id = "uploadBtn" onClick={()=>{if(name){setRequired(""); writeUserData5();}else{setRequired("Required fields cannot be empty!");}}}>Create</button>
             <p>{url}</p>
                 </div>
             );
@@ -419,16 +423,16 @@ function GenerateLinks(props){
                     <input className = "colorPicker1" type="color" value={color} onChange = {(c)=>{setColor(c.target.value);document.getElementById("simulation").style.background = `linear-gradient(${colorTop}, ${c.target.value})`; } }/>
                     </div>
                     <div className = "enterNameContainer">
-                    <p>Give us a username</p>
+                    <p>Give us a username *</p>
                     {enterName}
                     </div>
                     <p className = "red">{error}</p>
                     <AvatarUpload name = {name}/>
-            <button id = "uploadBtn" onClick={writeUserData6}>Create</button>
+                    <p className = "red" >{required}</p>
+            <button id = "uploadBtn" onClick={()=>{if(name){setRequired(""); writeUserData6();}else{setRequired("Required fields cannot be empty!");}}}>Create</button>
             <p>{url}</p>
                 </div>
             ); 
-
 
     }
 

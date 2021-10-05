@@ -19,6 +19,7 @@
 }
 
 #uploadBtn{
+  display: block;
   padding: 2vmin;   
   width: 34vmax;
   margin: 2vmin 2vmin 0 0;
@@ -221,6 +222,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.uploadedAvatar{
+  margin: 0 0 0 5vmin;
+  border: solid;
+  border-color: #0099ff;
+  border-radius: 2vmin;
+}
+
+#uploadDataBtn{
+  background-color: #0099ff;
+  border: none;
+  padding: 1vmin;
+  color: white;
+  border-radius: 1vmin;
 }
 
 #userIcon{

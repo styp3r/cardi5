@@ -32,7 +32,7 @@ app.get("/:id", (req, res)=>{
                     }
                 }
     
-                res.write("<h4 style = 'text-align: left; margin-left: 50%; transform: translateX(-50%); margin-top: 2vmax; width: 30vmin; border-radius: 2.5vmin ; background-color: "+color+"; padding: 2vmin;'><i style = 'color: #ffffff; margin: 0 2vmin 2vmin 2vmin;' class='"+type+" fa-"+socialName+"'></i><a style = 'display: block; text-decoration: none; color: #ffffff;' href = '"+entries[i][1]+"' target='_blank'>"+entries[i+1][1]+"</a></h4>");
+                res.write("<h4 style = 'text-align: center; margin-left: 50%; transform: translateX(-50%); margin-top: 2vmax; width: 25vmax; border-radius: 2.5vmin ; background-color: "+color+"; padding: 2vmin;'><i style = 'position: absolute; left: 2vmin; display: inline-block; color: #ffffff;' class='"+type+" fa-"+socialName+"'></i><a style = 'display: inline-block; text-decoration: none; color: #ffffff;' href = '"+entries[i][1]+"' target='_blank'>"+entries[i+1][1]+"</a></h4>");
                 
             }
             res.send();

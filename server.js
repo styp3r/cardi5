@@ -39,7 +39,7 @@ app.get("/:id", (req, res)=>{
                 
             }
             res.write("<div style = 'width: 5vmin ;height: 5vmax;'></div>");
-            res.write("<p style = 'padding: 2vmin;'>Kardi5</p>");
+            res.write("<p style = 'padding: 2vmin;'>Cardi5</p>");
             res.send();
         }else{
             res.send("ERROR 404");
